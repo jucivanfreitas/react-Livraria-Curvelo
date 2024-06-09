@@ -19,8 +19,8 @@ const headericons =[perfil,sacola]
 function AppMenuIcons() {
     return(
         <IconsContainer>
-          {headericons.map (icone=>(
-            <IconContainer >
+          {headericons.map ((icone, index)=>(
+            <IconContainer key={index} >
             <img src={icone} alt="icone" />
             </IconContainer>
           )

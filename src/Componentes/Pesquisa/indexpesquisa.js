@@ -76,15 +76,17 @@ function  Pesquisa() {
   return (
     <PesquisarContainer>
       <Titulo>Pesquisar uma Obra</Titulo>
-      <ImputContainer placeholder="Digite o nome do livro ou autor" onBlur={(evento) => {
+      <ImputContainer
+      placeholder="Digite o nome do livro ou autor"
+      onBlur={(evento) => {
         const textoDigitado = evento.target.value
         const resultadoPesquisa = livros.filter( livro => livro.nome.includes(textoDigitado) )
         setLivrospesquisados(resultadoPesquisa)
       }
       } />
       <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
-      { Livrospesquisados.map( livro => (
-                <Resultado>
+      { Livrospesquisados.map( (livro,index) => (
+                <Resultado key={index}>
                     <Contlivro >
                       <li><img src={livro.src}/></li>
                       <li><p>{livro.nome}</p></li>
