@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import ImputContainer from '../Imput';
 import { useEffect, useState } from 'react';
-import {getLivros} from '../../servicos/livros'
+import {getLivros, connected} from '../../servicos/livros'
 
 
 
@@ -64,10 +64,13 @@ function  Pesquisa() {
   const [livros, setLivros] = useState([])
 
   useEffect(() =>{
-    const livrosdaAPI = getLivros()
-      setLivros(livrosdaAPI)
-  },[])
+    fetchLivros()
+  },[]) //mantem os dados disponíveis no ato do carregamento da pagina
 
+  async function fetchLivros(){
+    const livrosdaAPI = await getLivros()
+    setLivros(livrosdaAPI)
+  }
 
 
   return (
@@ -77,9 +80,6 @@ function  Pesquisa() {
         const textoDigitado = evento.target.value
         const resultadoPesquisa = livros.filter( livro => livro.nome.includes(textoDigitado) )
         setLivrospesquisados(resultadoPesquisa)
-
-
-
       }
       } />
       <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>

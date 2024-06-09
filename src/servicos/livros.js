@@ -1,15 +1,15 @@
 import axios from "axios";
 
-const livrosAPI = axios.create({baseURL:"https://api01-livraria.onrender.com/"})
+const livrosAPI = axios.create({baseURL:"https://api01-livraria.onrender.com/livros"})
 
 // código omitido…
-function connected(){
-  const response = livrosAPI.get('/')
+async function connected(){
+  const response = await livrosAPI.get('/')
   return response.data
 }
 
-function getLivros() {
-  const response = livrosAPI.get('/all')
+async function getLivros() {
+  const response = await livrosAPI.get('/all')
   return response.data
 }
 
