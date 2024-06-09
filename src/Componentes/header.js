@@ -1,5 +1,6 @@
 
 
+import { Link } from 'react-router-dom'
 import AppLogo from './Componentes_header/Logo'
 import AppMenu from './Componentes_header/Menu'
 
@@ -22,7 +23,9 @@ const AppHeaderContainer = styled.header`
 function Apphader() {
     return(
       <AppHeaderContainer>
-        <AppLogo />
+      <Link to='/'>
+          <AppLogo />
+        </Link>
         <AppMenu />
         <AppMenuIcons/>
       </AppHeaderContainer>

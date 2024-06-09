@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import {BrowserRouter,Routes, Route} from "react-router-dom"
+import Apphader from './Componentes/header.js'
+import Home from './Rotas/home';
+import Favoritos from './Rotas/favoritos.js';
+import Categorias from './Rotas/categorias.js';
+import Estante from './Rotas/estante.js';
 
 const GlobalStyleComponent = createGlobalStyle`
   body {
@@ -32,16 +36,27 @@ root.render(
   <React.StrictMode>
     <GlobalStyleComponent />
     <BrowserRouter>
+    <Apphader/>
     <Routes>
-      <Route
-          path = "/favoritos"
-          element ={<p>favoritos</p>}
-          />
 
-    <Route
-          path = "/"
-          element ={ <App />}
-          />
+
+      <Route
+            path = "/"
+            element ={ <Home />}
+      />
+      <Route
+            path = "/categorias"
+            element ={ <Categorias />}
+      />
+      <Route
+              path = "/favoritos"
+              element ={<Favoritos/>}
+      />
+      <Route
+            path = "/estante"
+            element ={ <Estante />}
+      />
+
     </Routes>
     </BrowserRouter>
 

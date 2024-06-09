@@ -24,7 +24,7 @@ function AppMenu() {
     return(
                 <MenuContainer>
                     { MenuItems.map ( (texto) => (
-                        <Link to ={`/${texto}`}>
+                        <Link to={`/${texto.toLowerCase()}`}>
                             <MenuItemContainer><p>{texto}</p>
                             </MenuItemContainer>
                         </Link>

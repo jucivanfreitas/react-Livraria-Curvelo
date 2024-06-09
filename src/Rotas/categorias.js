@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Apphader from './Componentes/header.js'
-import Pesquisa from './Componentes/Pesquisa/indexpesquisa.js';
+
+import Pesquisa from '../Componentes/Pesquisa/indexpesquisa.js';
 
 const AppContainer = styled.div`
   background-color: #A8A8AC;
@@ -17,13 +17,13 @@ const AppContainer = styled.div`
 `
 
 
-function App() {
+function Categorias() {
   return (
     <AppContainer>
-      <Apphader/>
       <Pesquisa/>
+      <p>categorias</p>
     </AppContainer>
   );
 }
 
-export default App
+export default Categorias
