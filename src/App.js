@@ -4,7 +4,7 @@ import Pesquisa from './Componentes/Pesquisa/indexpesquisa.js';
 
 const AppContainer = styled.div`
   background-color: #A8A8AC;
-  background-image: linear-gradient(100deg, #b5c6e0 45%, #f3f8f9);
+  background-image: linear-gradient(100deg, #A7B8D1 45%, #f3f8f9);
   height: 100vh;
   width: 100vw;
   display: flex;
