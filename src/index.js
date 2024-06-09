@@ -5,9 +5,9 @@ import { createGlobalStyle } from 'styled-components';
 import {BrowserRouter,Routes, Route} from "react-router-dom"
 import Apphader from './Componentes/header.js'
 import Home from './Rotas/home';
-import Favoritos from './Rotas/favoritos.js';
-import Categorias from './Rotas/categorias.js';
-import Estante from './Rotas/estante.js';
+import Favoritos from './Rotas/favoritos';
+import Categorias from './Rotas/categorias';
+import Estante from './Rotas/estante';
 
 const GlobalStyleComponent = createGlobalStyle`
   body {
