@@ -21,7 +21,7 @@ function AppLogo() {
     <LogoContainer >
           <ImgLogoContainer src={imglogo} alt="logo" className='img-logo' />
           <p>
-          <strong>Alura</strong>Books
+          <strong>Curvelo</strong>Books
           </p>
     </LogoContainer>
 
