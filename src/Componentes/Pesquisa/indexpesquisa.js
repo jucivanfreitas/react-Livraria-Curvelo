@@ -1,8 +1,9 @@
 
 import styled from 'styled-components'
 import ImputContainer from '../Imput';
-import { useState } from 'react';
-import{livros} from './dadosPesquisa.js'
+import { useEffect, useState } from 'react';
+import {getLivros} from '../../servicos/livros'
+
 
 
 const PesquisarContainer = styled.section`
@@ -60,6 +61,13 @@ display: flex;
 
 function  Pesquisa() {
   const [Livrospesquisados, setLivrospesquisados] = useState([])
+  const [livros, setLivros] = useState([])
+
+  useEffect(() =>{
+    const livrosdaAPI = getLivros()
+      setLivros(livrosdaAPI)
+  },[])
+
 
 
   return (
