@@ -3,7 +3,7 @@ import Apphader from './Componentes/header.js'
 import Pesquisa from './Componentes/Pesquisa/indexpesquisa.js';
 
 const AppContainer = styled.div`
-  background-color: #9b9b9e;
+  background-color: #A8A8AC;
   background-image: linear-gradient(100deg, #b5c6e0 45%, #f3f8f9);
   height: 100vh;
   width: 100vw;
