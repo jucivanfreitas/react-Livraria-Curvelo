@@ -22,7 +22,6 @@ function App() {
     <AppContainer>
       <Apphader/>
       <Pesquisa/>
-
     </AppContainer>
   );
 }

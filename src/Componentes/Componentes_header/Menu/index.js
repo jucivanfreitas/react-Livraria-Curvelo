@@ -1,5 +1,6 @@
 
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const MenuContainer = styled.ul`
 display: flex;
@@ -16,15 +17,18 @@ const MenuItemContainer= styled.li`
     min-width: 120px;
     `
 
-const MenuItems = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+const MenuItems = ['CATEGORIAS', 'FAVORITOS', 'ESTANTE']
 
 
 function AppMenu() {
     return(
                 <MenuContainer>
                     { MenuItems.map ( (texto) => (
-                        <MenuItemContainer><p>{texto}</p>
-                        </MenuItemContainer>
+                        <Link to ={`/${texto}`}>
+                            <MenuItemContainer><p>{texto}</p>
+                            </MenuItemContainer>
+                        </Link>
+
                     ) ) }
                 </MenuContainer>
     )
