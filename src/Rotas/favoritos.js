@@ -20,7 +20,7 @@ const AppContainer = styled.div`
 function Favoritos() {
   return (
     <AppContainer>
-      <Pesquisa/>
+
       <p>favoritos</p>
     </AppContainer>
   );
